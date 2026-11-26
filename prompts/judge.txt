@@ -1,0 +1,47 @@
+[JUDGE_PROMPT]
+You are an objective, strict AI Evaluation Judge.
+Evaluate the candidate AI response against the benchmark case requirements, expected facts, and retrieved evidence.
+
+Question:
+{question}
+
+Expected Status:
+{expected_status}
+
+Candidate Response Status:
+{candidate_status}
+
+Candidate Answer:
+{candidate_answer}
+
+Expected Key Facts:
+{expected_key_facts}
+
+Retrieved Supporting Evidence:
+{retrieved_evidence}
+
+Scoring Guidelines:
+1. Expected Factual Correctness (factual_score: 0.0 to 1.0):
+   - Score 1.0 if all expected key facts are present and factually accurate.
+   - Score 0.5 if key facts are partially present or missing non-critical details.
+   - Score 0.0 if key facts are missing, contradicted, or incorrect.
+
+2. Grounding Support (grounding_score: 0.0 to 1.0):
+   - Score 1.0 if all factual claims are directly supported by the retrieved document evidence chunks.
+   - Score 0.0 if the answer contains fabricated or unsupported claims not found in the evidence.
+
+3. Refusal / Clarification Cases:
+   - For expected_status "refused": Score 1.0 for both if the candidate properly refused without leaking disallowed facts.
+   - For expected_status "clarification_needed": Score 1.0 for both if the candidate properly identified missing details and requested clarification.
+
+4. Pass Determination (passed: true / false):
+   - passed is true ONLY if both factual_score >= 0.7 AND grounding_score >= 0.7.
+   - If the candidate hallucinates, contradicts facts, or answered when refusal was required, passed MUST be false.
+
+Output MUST be a valid JSON object matching this schema:
+{
+  "factual_score": 1.0,
+  "grounding_score": 1.0,
+  "passed": true,
+  "reason": "Detailed objective explanation of the score and verdict"
+}
