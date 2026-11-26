@@ -1,0 +1,14 @@
+Requester: Oceanic Fleet Technical Procurement Division
+Project Goal: Build an automated procurement assistant for vessel engineers and purchasing officers.
+Audience: Fleet procurement officers, marine chief engineers, and port logistics agents.
+Tone: Analytical, precise, and operational.
+Core Capabilities Required:
+- Query part numbers, exact unit prices, current stock on hand, and supplier lead times from the marine spare parts catalog.
+- Calculate order totals, volume discount deductions, and net purchase prices based on order quantities and pricing tiers.
+- Apply commercial terms including 2% early settlement discounts and minimum purchase order threshold rules.
+- Calculate total delivery costs including priority emergency freight surcharges and mandatory customs clearance fees.
+- Explain port storage grace periods, demurrage fees, and mandatory inspection certificates for engine parts.
+- Underwrite supplier insolvency insurance and sovereign debt default compensation for shipyard contracts.
+Execution Constraints:
+- Must query the spare parts catalog for exact part numbers, stock, and unit prices.
+- Must compute accurate arithmetic calculations for total costs, volume discounts, and shipping surcharges.

@@ -1,0 +1,15 @@
+part_number,item_name,category,manufacturer,unit_price_usd,lead_time_days,minimum_order_qty,stock_on_hand
+MAR-VAL-101,High-Pressure Globe Valve 50mm,Valves,Danfoss Marine,480.00,14,2,18
+MAR-VAL-102,Butterfly Check Valve 100mm,Valves,Danfoss Marine,320.00,10,3,25
+ENG-INJ-201,Heavy Fuel Injector Nozzle,Fuel Injection,Wartsila Engine Parts,850.00,21,4,12
+ENG-INJ-202,Common Rail Pressure Relief Valve,Fuel Injection,Wartsila Engine Parts,1250.00,28,1,6
+PMP-SLR-301,Centrifugal Bilge Slurry Pump,Pumps,Sulzer Marine,3400.00,35,1,4
+PMP-SLR-302,Submersible Ballast Pump Impeller,Pumps,Sulzer Marine,920.00,18,2,9
+TRB-BRG-401,Turbocharger Radial Journal Bearing,Turbocharger,ABB Turbo Systems,1650.00,25,2,8
+TRB-BRG-402,Thrust Bearing Collar Ring,Turbocharger,ABB Turbo Systems,740.00,12,4,15
+FLT-SEA-501,Duplex Seawater Strainer Element,Filtration,Parker Hannifin,210.00,7,5,40
+FLT-OIL-502,Lube Oil Fine Cartridge Filter,Filtration,Parker Hannifin,145.00,5,10,65
+SEL-MCH-601,Silicon Carbide Mechanical Shaft Seal,Seals,EagleBurgmann,560.00,15,3,22
+GAS-CYL-701,High-Temperature Exhaust Cylinder Gasket,Gaskets,Victor Reinz,95.00,7,8,50
+SEN-PRS-801,Digital Hydraulic Pressure Transmitter,Instrumentation,Yokogawa Marine,680.00,14,2,14
+ELE-ACT-901,Electric Rotary Valve Actuator 24V,Actuators,Rotork Marine,1850.00,30,1,5

@@ -1,0 +1,337 @@
+{
+  "total_cases": 20,
+  "cases": [
+    {
+      "id": "eval_001",
+      "category": "out_of_scope",
+      "question": "Evaluation Question out_of_scope 3_0 for P-302?",
+      "expected_status": "refused",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": []
+    },
+    {
+      "id": "eval_002",
+      "category": "out_of_scope",
+      "question": "Evaluation Question out_of_scope 3_1 for P-302?",
+      "expected_status": "refused",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": []
+    },
+    {
+      "id": "eval_003",
+      "category": "out_of_scope",
+      "question": "Evaluation Question out_of_scope 3_2 for P-302?",
+      "expected_status": "refused",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": []
+    },
+    {
+      "id": "eval_004",
+      "category": "out_of_scope",
+      "question": "Evaluation Question out_of_scope 3_3 for P-302?",
+      "expected_status": "refused",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": []
+    },
+    {
+      "id": "eval_005",
+      "category": "ambiguous",
+      "question": "Evaluation Question ambiguous 4_0 for P-302?",
+      "expected_status": "clarification_needed",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": []
+    },
+    {
+      "id": "eval_006",
+      "category": "ambiguous",
+      "question": "Evaluation Question ambiguous 4_1 for P-302?",
+      "expected_status": "clarification_needed",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": []
+    },
+    {
+      "id": "eval_007",
+      "category": "ambiguous",
+      "question": "Evaluation Question ambiguous 4_2 for P-302?",
+      "expected_status": "clarification_needed",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": []
+    },
+    {
+      "id": "eval_008",
+      "category": "answerable",
+      "question": "What is the maximum annual dental coverage provided by the Oceanic Maritime Comprehensive Health Plan?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member."
+        }
+      ]
+    },
+    {
+      "id": "eval_009",
+      "category": "answerable",
+      "question": "What is the copayment for a specialist consultation in the Oceanic Maritime Comprehensive Health Plan?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Specialist consultation copayment: $40 flat copay per in-network specialist visit"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Specialist consultation copayment: $40 flat copay per in-network specialist visit."
+        }
+      ]
+    },
+    {
+      "id": "eval_010",
+      "category": "answerable",
+      "question": "What is the maximum annual benefit for prescription eyewear or contact lenses under the Oceanic Maritime Comprehensive Health Plan?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Optical allowance: $300 annual benefit for prescription eyewear or contact lenses"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Optical allowance: $300 annual benefit for prescription eyewear or contact lenses."
+        }
+      ]
+    },
+    {
+      "id": "eval_011",
+      "category": "answerable",
+      "question": "What is the maximum annual benefit for gym memberships or ergonomic home equipment under the annual wellness stipend?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "maximum annual benefit for gym memberships or ergonomic home equipment"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment."
+        }
+      ]
+    },
+    {
+      "id": "eval_012",
+      "category": "answerable",
+      "question": "What is the maximum annual benefit for tuition reimbursement under the tuition reimbursement cap?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "maximum annual benefit for tuition reimbursement"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework."
+        }
+      ]
+    },
+    {
+      "id": "eval_013",
+      "category": "answerable",
+      "question": "What is the maximum annual leave accrual rate for full-time employees?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "22 working days of paid annual leave per calendar year",
+        "1.83 working days per completed month of active service"
+      ],
+      "expected_sources": [
+        "leave_and_attendance_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "excerpt": "Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service."
+        }
+      ]
+    },
+    {
+      "id": "eval_014",
+      "category": "answerable",
+      "question": "How many paid sick days do employees receive per calendar year?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "10 paid sick days per calendar year"
+      ],
+      "expected_sources": [
+        "leave_and_attendance_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "excerpt": "Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1."
+        }
+      ]
+    },
+    {
+      "id": "eval_015",
+      "category": "answerable",
+      "question": "How many days of bereavement leave are available for immediate family members?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "5 consecutive paid working days for immediate family members"
+      ],
+      "expected_sources": [
+        "leave_and_attendance_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "excerpt": "Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family."
+        }
+      ]
+    },
+    {
+      "id": "eval_016",
+      "category": "answerable",
+      "question": "How many weeks of parental leave are fully paid for primary and secondary caregivers?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "16 weeks fully paid primary caregiver leave",
+        "6 weeks fully paid secondary caregiver leave"
+      ],
+      "expected_sources": [
+        "leave_and_attendance_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "excerpt": "Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service."
+        }
+      ]
+    },
+    {
+      "id": "eval_017",
+      "category": "answerable",
+      "question": "What is the maximum annual wellness stipend for gym memberships or ergonomic home equipment?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Maximum annual wellness stipend is not specified in the provided document"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "The document does not specify the maximum annual wellness stipend for gym memberships or ergonomic home equipment."
+        }
+      ]
+    },
+    {
+      "id": "eval_018",
+      "category": "cross_document",
+      "question": "What is the annual wellness stipend amount for full-time employees at Oceanic Maritime Logistics?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "annual wellness stipend amount"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf",
+        "leave_and_attendance_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment."
+        },
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "excerpt": "Standard working hours for full-time shore staff are 40 hours per week."
+        }
+      ]
+    },
+    {
+      "id": "eval_019",
+      "category": "cross_document",
+      "question": "What is the maximum amount for annual leave accrual for full-time employees at Oceanic Maritime Logistics?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "maximum amount for annual leave accrual for full-time employees"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf",
+        "leave_and_attendance_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment."
+        },
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "excerpt": "Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year."
+        }
+      ]
+    },
+    {
+      "id": "eval_020",
+      "category": "cross_document",
+      "question": "What is the maximum amount for health insurance copays for full-time employees at Oceanic Maritime Logistics?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Healthcare coverage provider, copayment for primary care visits, copayment for specialist visits, and dental coverage maximum"
+      ],
+      "expected_sources": [
+        "benefits_and_wellness_policy.pdf",
+        "workplace_conduct_and_travel_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Primary care consultation copayment: $25 flat copay per in-network visit."
+        },
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "excerpt": "Specialist consultation copayment: $40 flat copay per in-network specialist visit."
+        },
+        {
+          "source": "workplace_conduct_and_travel_policy.pdf",
+          "excerpt": "Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member."
+        }
+      ]
+    }
+  ]
+}

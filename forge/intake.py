@@ -266,6 +266,27 @@ class IntakeInterviewer:
 
         return validate_requirements(response)
 
+    def run_intake(
+        self,
+        brief: str,
+        documents: Sequence[Document],
+        interactive: bool = False,
+        answers: Optional[Dict[str, str]] = None,
+    ) -> Dict[str, Any]:
+        """Execute the full intake interview flow from brief and documents."""
+        q_dicts = self.generate_clarifying_questions(brief, documents)
+        rec_answers, rec_assumptions = self.collect_answers(
+            q_dicts, interactive=interactive, answers=answers
+        )
+        q_list = [item["question"] for item in q_dicts]
+        return self.generate_requirements(
+            brief=brief,
+            documents=documents,
+            questions=q_list,
+            answers=rec_answers,
+            assumptions=rec_assumptions,
+        )
+
     def conduct_intake(
         self,
         brief: str,

@@ -1,0 +1,161 @@
+{
+  "scope": "Assistance strictly constrained to verified capabilities: Calculate order totals, volume discount deductions, and net purchase prices based on order quantities and pricing tiers.; Apply commercial terms including 2% early settlement discounts and minimum purchase order threshold rules.; Calculate total delivery costs including priority emergency freight surcharges and mandatory customs clearance fees.; Explain port storage grace periods, demurrage fees, and mandatory inspection certificates for engine parts.. All unrequested, speculative, or unverified capabilities are excluded.",
+  "audience": "Fleet procurement officers, marine chief engineers, and port logistics agents, with a technical proficiency level that requires understanding of marine parts, pricing, and logistics.",
+  "tone": "Analytical, precise, and operational, designed to provide clear and concise information to users who are familiar with marine engineering and procurement processes.",
+  "must_answer_topics": [
+    "Calculate order totals, volume discount deductions, and net purchase prices based on order quantities and pricing tiers.",
+    "Apply commercial terms including 2% early settlement discounts and minimum purchase order threshold rules.",
+    "Calculate total delivery costs including priority emergency freight surcharges and mandatory customs clearance fees.",
+    "Explain port storage grace periods, demurrage fees, and mandatory inspection certificates for engine parts."
+  ],
+  "must_refuse_topics": [
+    "Calculate hazardous material transport handling fees based on the provided document context.",
+    "Calculate port storage grace periods and demurrage fees based on the provided document context.",
+    "Calculate mandatory inspection certificates and inspection certification fees based on the provided document context.",
+    "Underwrite supplier insolvency insurance and sovereign debt default compensation based on the provided document context.",
+    "Calculate priority emergency freight surcharges based on the provided document context.",
+    "Query part numbers, exact unit prices, current stock on hand, and supplier lead times from the marine spare parts catalog. [Refusal: Unsupported by available documents]"
+  ],
+  "clarifying_questions": [
+    "Should the automated procurement assistant include the calculation of hazardous material transport handling fees based on the provided document context?",
+    "Should the automated procurement assistant include the calculation of port storage grace periods and demurrage fees based on the provided document context?",
+    "Should the automated procurement assistant include the calculation of mandatory inspection certificates and inspection certification fees based on the provided document context?",
+    "Should the automated procurement assistant include the calculation of supplier insolvency insurance and sovereign debt default compensation based on the provided document context?",
+    "Should the automated procurement assistant include the calculation of priority emergency freight surcharges based on the provided document context?"
+  ],
+  "answers": {},
+  "assumptions": {
+    "Should the automated procurement assistant include the calculation of hazardous material transport handling fees based on the provided document context?": "No, exclude this capability unless explicitly requested in the brief or verified in documents.",
+    "Should the automated procurement assistant include the calculation of port storage grace periods and demurrage fees based on the provided document context?": "No, exclude this capability unless explicitly requested in the brief or verified in documents.",
+    "Should the automated procurement assistant include the calculation of mandatory inspection certificates and inspection certification fees based on the provided document context?": "No, exclude this capability unless explicitly requested in the brief or verified in documents.",
+    "Should the automated procurement assistant include the calculation of supplier insolvency insurance and sovereign debt default compensation based on the provided document context?": "No, exclude this capability unless explicitly requested in the brief or verified in documents.",
+    "Should the automated procurement assistant include the calculation of priority emergency freight surcharges based on the provided document context?": "No, exclude this capability unless explicitly requested in the brief or verified in documents."
+  },
+  "inspected_documents": [
+    "port_delivery_and_logistics_policy.pdf:p1",
+    "port_delivery_and_logistics_policy.pdf:p2",
+    "spare_parts_catalog.csv:r1",
+    "spare_parts_catalog.csv:r2",
+    "spare_parts_catalog.csv:r3",
+    "spare_parts_catalog.csv:r4",
+    "spare_parts_catalog.csv:r5",
+    "spare_parts_catalog.csv:r6",
+    "spare_parts_catalog.csv:r7",
+    "spare_parts_catalog.csv:r8",
+    "spare_parts_catalog.csv:r9",
+    "spare_parts_catalog.csv:r10",
+    "spare_parts_catalog.csv:r11",
+    "spare_parts_catalog.csv:r12",
+    "spare_parts_catalog.csv:r13",
+    "spare_parts_catalog.csv:r14",
+    "supplier_terms_and_discounts.pdf:p1",
+    "supplier_terms_and_discounts.pdf:p2"
+  ],
+  "omitted_documents": [],
+  "original_scope": "The automated procurement assistant will query part numbers, exact unit prices, current stock on hand, and supplier lead times from the marine spare parts catalog, calculate order totals, volume discount deductions, and net purchase prices based on order quantities and pricing tiers, apply commercial terms including 2% early settlement discounts and minimum purchase order threshold rules, calculate total delivery costs including priority emergency freight surcharges and mandatory customs clearance fees, and explain port storage grace periods, demurrage fees, and mandatory inspection certificates for engine parts. The assistant will not include the calculation of hazardous material transport handling fees, port storage grace periods and demurrage fees, mandatory inspection certificates and inspection certification fees, supplier insolvency insurance and sovereign debt default compensation, or priority emergency freight surcharges.",
+  "permitted_scope": "Assistance strictly constrained to verified capabilities: Calculate order totals, volume discount deductions, and net purchase prices based on order quantities and pricing tiers.; Apply commercial terms including 2% early settlement discounts and minimum purchase order threshold rules.; Calculate total delivery costs including priority emergency freight surcharges and mandatory customs clearance fees.; Explain port storage grace periods, demurrage fees, and mandatory inspection certificates for engine parts.. All unrequested, speculative, or unverified capabilities are excluded.",
+  "original_must_answer_topics": [
+    "Query part numbers, exact unit prices, current stock on hand, and supplier lead times from the marine spare parts catalog.",
+    "Calculate order totals, volume discount deductions, and net purchase prices based on order quantities and pricing tiers.",
+    "Apply commercial terms including 2% early settlement discounts and minimum purchase order threshold rules.",
+    "Calculate total delivery costs including priority emergency freight surcharges and mandatory customs clearance fees.",
+    "Explain port storage grace periods, demurrage fees, and mandatory inspection certificates for engine parts."
+  ],
+  "groundability_report": [
+    {
+      "topic": "Query part numbers, exact unit prices, current stock on hand, and supplier lead times from the marine spare parts catalog.",
+      "status": "unsupported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks do not contain any information about part numbers, exact unit prices, current stock on hand, or supplier lead times. The chunks only provide information about payment terms, warranty provisions, port logistics policies, and delivery terms. There is no direct evidence related to the marine spare parts catalog.",
+      "citations": [
+        {
+          "source": "supplier_terms_and_discounts.pdf",
+          "chunk_id": "supplier_terms_and_discounts.pdf:p2:c0",
+          "excerpt": "Volume discount tier 1: 5% discount on catalog line items for single-order values between $5,000 and $14,999. Volume discount tier 2: 10% discount on catalog line items for single-order values between $15,000 and $29,999. Volume discount tier 3: 15% discount on catalog line items for single-order values of $30,000 or greater."
+        },
+        {
+          "source": "supplier_terms_and_discounts.pdf",
+          "chunk_id": "supplier_terms_and_discounts.pdf:p1:c0",
+          "excerpt": "Volume discount tier 1: 5% discount on catalog line items for single-order values between $5,000 and $14,999. Volume discount tier 2: 10% discount on catalog line items for single-order values between $15,000 and $29,999. Volume discount tier 3: 15% discount on catalog line items for single-order values of $30,000 or greater."
+        },
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "chunk_id": "port_delivery_and_logistics_policy.pdf:p2:c0",
+          "excerpt": "Port warehouse storage grace period: Consignments receive 5 free calendar days of secure bonded port storage upon cargo arrival. Excess demurrage storage fee: $45 per pallet per day charged following expiration of the 5-day grace period."
+        },
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "chunk_id": "port_delivery_and_logistics_policy.pdf:p1:c0",
+          "excerpt": "Standard maritime customs clearance fee: Flat $220 processing fee per consignment at all designated port hubs. Designated international port delivery hubs: Rotterdam (Netherlands), Singapore (Jurong Port), Houston (USA), and Busan (South Korea). Priority emergency freight surcharge: Flat $450 surcharge for expedited courier delivery to vessel berth within 72 hours of vessel port arrival."
+        }
+      ],
+      "knowledge_gaps": [
+        "No information about part numbers, exact unit prices, current stock on hand, or supplier lead times."
+      ],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Calculate order totals, volume discount deductions, and net purchase prices based on order quantities and pricing tiers.",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain information about volume discount schedules and pricing tiers, which are directly relevant to calculating order totals, volume discount deductions, and net purchase prices based on order quantities and pricing tiers. The volume discount schedules provided in the 'supplier_terms_and_discounts.pdf' document evidence chunks cover the discount tiers and their corresponding single-order values, which are essential for calculating these financial aspects.",
+      "citations": [
+        {
+          "source": "supplier_terms_and_discounts.pdf",
+          "chunk_id": "supplier_terms_and_discounts.pdf:p2:c0",
+          "excerpt": "Volume discount tier 1: 5% discount on catalog line items for single-order values between $5,000 and $14,999. Volume discount tier 2: 10% discount on catalog line items for single-order values between $15,000 and $29,999. Volume discount tier 3: 15% discount on catalog line items for single-order values of $30,000 or greater."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Apply commercial terms including 2% early settlement discounts and minimum purchase order threshold rules.",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain direct, factual evidence covering the core scope of the topic, specifically mentioning 2% early settlement discounts and minimum purchase order threshold rules.",
+      "citations": [
+        {
+          "source": "supplier_terms_and_discounts.pdf",
+          "chunk_id": "supplier_terms_and_discounts.pdf:p1:c0",
+          "excerpt": "Early payment cash discount: 2% settlement discount on total invoice amount if full payment is remitted within 10 calendar days. Minimum purchase order threshold: Small order processing fee of $75 is assessed on purchase orders under $500 total value."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Calculate total delivery costs including priority emergency freight surcharges and mandatory customs clearance fees.",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain direct, factual information about customs clearance fees and priority emergency freight surcharges, which are relevant to the topic of calculating total delivery costs.",
+      "citations": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "chunk_id": "port_delivery_and_logistics_policy.pdf:p1:c0",
+          "excerpt": "Standard maritime customs clearance fee: Flat $220 processing fee per consignment at all designated port hubs. Priority emergency freight surcharge: Flat $450 surcharge for expedited courier delivery to vessel berth within 72 hours of vessel port arrival."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Explain port storage grace periods, demurrage fees, and mandatory inspection certificates for engine parts.",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain direct, factual information about port storage grace periods, demurrage fees, and mandatory inspection certificates for engine parts. The document explicitly mentions the port warehouse storage grace period, demurrage storage fee, and the mandatory inspection certificate for engine fuel injection parts and turbocharger bearings.",
+      "citations": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "chunk_id": "port_delivery_and_logistics_policy.pdf:p2:c0",
+          "excerpt": "Port warehouse storage grace period: Consignments receive 5 free calendar days of secure bonded port storage upon cargo arrival. Excess demurrage storage fee: $45 per pallet per day charged following expiration of the 5-day grace period. Pre-shipment classification inspection certificate: Mandatory for all engine fuel injection parts and turbocharger bearings. Inspection certification fee: Flat $150 fee per certified component batch issued by DNV or Lloyd\u2019s Register. Delivery inspection protocol: Vessel receiving officer must sign goods receipt note within 24 hours of quayside delivery."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    }
+  ],
+  "knowledge_gaps": [
+    "No information about part numbers, exact unit prices, current stock on hand, or supplier lead times."
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "scope": "Assistance strictly constrained to verified capabilities: Annual leave accrual; Sick leave; Parental leave; Bereavement allowances; Working hours and core hours expectations; Overtime eligibility; Health insurance copays; Annual wellness stipends; 401(k) retirement matching; Tuition assistance caps; Verified aspects of Remote work schedule rules; Domestic/international travel meal per diems; Hotel lodging expense ceilings; Travel expense report submission windows; Anti-harassment grievance filing procedures. All unrequested, speculative, or unverified capabilities are excluded.",
+  "audience": "Maritime operations staff, shore personnel, and department managers with a professional, direct, and supportive tone.",
+  "tone": "Professional, direct, and supportive.",
+  "must_answer_topics": [
+    "Annual leave accrual",
+    "Sick leave",
+    "Parental leave",
+    "Bereavement allowances",
+    "Working hours and core hours expectations",
+    "Overtime eligibility",
+    "Health insurance copays",
+    "Annual wellness stipends",
+    "401(k) retirement matching",
+    "Tuition assistance caps",
+    "Verified aspects of Remote work schedule rules",
+    "Domestic/international travel meal per diems",
+    "Hotel lodging expense ceilings",
+    "Travel expense report submission windows",
+    "Anti-harassment grievance filing procedures"
+  ],
+  "must_refuse_topics": [
+    "Historical logs or real-time alerts for annual leave accrual",
+    "External calculation tools or database APIs for health insurance copays",
+    "Automated scheduling or forecasting for remote work schedule rules",
+    "External calculation tools or database APIs for tuition assistance caps",
+    "Real-time alerts or automated responses for anti-harassment grievance filing procedures",
+    "Remote work schedule rules [Unsupported aspects: Overtime eligibility and pre-authorization procedures for non-exempt maritime operations support staff.; Resignation notice period for standard staff and Department Directors.; Anti-harassment reporting procedures and formal workplace harassment grievances filing requirements.]",
+    "Executive stock option vesting acceleration [Refusal: Unsupported by available documents]",
+    "Offshore relocation tax equalization allowances [Refusal: Unsupported by available documents]"
+  ],
+  "clarifying_questions": [
+    "For annual leave accrual, should the system strictly adhere to the policy without introducing any additional features like historical logs or real-time alerts?",
+    "Regarding health insurance copays, should the system only use the provided policy provisions and not include any external calculation tools or database APIs?",
+    "For remote work schedule rules, should the system strictly follow the core hours and availability requirements without adding any additional features like automated scheduling or forecasting?",
+    "For tuition assistance caps, should the system only use the provided policy provisions and not include any external calculation tools or database APIs?",
+    "For anti-harassment grievance filing procedures, should the system only use the provided policy provisions and not include any additional features like real-time alerts or automated responses?"
+  ],
+  "answers": {},
+  "assumptions": {
+    "For annual leave accrual, should the system strictly adhere to the policy without introducing any additional features like historical logs or real-time alerts?": "No, exclude this capability unless explicitly requested in the brief",
+    "Regarding health insurance copays, should the system only use the provided policy provisions and not include any external calculation tools or database APIs?": "No, exclude this capability unless explicitly requested in the brief",
+    "For remote work schedule rules, should the system strictly follow the core hours and availability requirements without adding any additional features like automated scheduling or forecasting?": "No, exclude this capability unless explicitly requested in the brief",
+    "For tuition assistance caps, should the system only use the provided policy provisions and not include any external calculation tools or database APIs?": "No, exclude this capability unless explicitly requested in the brief",
+    "For anti-harassment grievance filing procedures, should the system only use the provided policy provisions and not include any additional features like real-time alerts or automated responses?": "No, exclude this capability unless explicitly requested in the brief"
+  },
+  "inspected_documents": [
+    "benefits_and_wellness_policy.pdf:p1",
+    "benefits_and_wellness_policy.pdf:p2",
+    "leave_and_attendance_policy.pdf:p1",
+    "leave_and_attendance_policy.pdf:p2",
+    "workplace_conduct_and_travel_policy.pdf:p1",
+    "workplace_conduct_and_travel_policy.pdf:p2"
+  ],
+  "omitted_documents": [],
+  "original_scope": "The system will provide authoritative answers regarding annual leave accrual, sick leave, parental leave, and bereavement allowances for employees. It will also explain working hours, core hours expectations, and overtime eligibility rules. The system will clarify health insurance copays, annual wellness stipends, 401(k) retirement matching, and tuition assistance caps. It will detail remote work schedule rules, domestic/international travel meal per diems, and hotel lodging expense ceilings. The system will explain travel expense report submission windows and anti-harassment grievance filing procedures. The system will detail executive stock option vesting acceleration and offshore relocation tax equalization allowances. All responses must be grounded strictly in official policy documentation and do not use external calculation tools or database APIs; all answers must cite document policy provisions.",
+  "permitted_scope": "Assistance strictly constrained to verified capabilities: Annual leave accrual; Sick leave; Parental leave; Bereavement allowances; Working hours and core hours expectations; Overtime eligibility; Health insurance copays; Annual wellness stipends; 401(k) retirement matching; Tuition assistance caps; Verified aspects of Remote work schedule rules; Domestic/international travel meal per diems; Hotel lodging expense ceilings; Travel expense report submission windows; Anti-harassment grievance filing procedures. All unrequested, speculative, or unverified capabilities are excluded.",
+  "original_must_answer_topics": [
+    "Annual leave accrual",
+    "Sick leave",
+    "Parental leave",
+    "Bereavement allowances",
+    "Working hours and core hours expectations",
+    "Overtime eligibility",
+    "Health insurance copays",
+    "Annual wellness stipends",
+    "401(k) retirement matching",
+    "Tuition assistance caps",
+    "Remote work schedule rules",
+    "Domestic/international travel meal per diems",
+    "Hotel lodging expense ceilings",
+    "Travel expense report submission windows",
+    "Anti-harassment grievance filing procedures",
+    "Executive stock option vesting acceleration",
+    "Offshore relocation tax equalization allowances"
+  ],
+  "groundability_report": [
+    {
+      "topic": "Annual leave accrual",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain direct, factual information about annual leave accrual, including the accrual rate, maximum rollover, and utilization rules. The excerpts from the 'leave_and_attendance_policy.pdf' document provide clear details on these aspects.",
+      "citations": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+          "excerpt": "Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Sick leave",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunk contains direct, factual evidence related to sick leave. It specifies that employees receive 10 paid sick days per calendar year, and it mentions the medical certification rule for consecutive sick leave absences exceeding 3 days.",
+      "citations": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+          "excerpt": "Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Parental leave",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunk explicitly mentions 'Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.' This directly supports the core scope of the topic of Parental leave.",
+      "citations": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+          "excerpt": "Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Bereavement allowances",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunk contains specific details about bereavement leave, which directly supports the topic of bereavement allowances. The chunk specifies that bereavement leave includes 5 consecutive paid working days for immediate family members and 3 paid days for extended family members.",
+      "citations": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+          "excerpt": "Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Working hours and core hours expectations",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain direct, factual evidence covering the core scope of the topic, including standard working hours, core operating hours, and overtime expectations.",
+      "citations": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+          "excerpt": "Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Overtime eligibility",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunk explicitly states the overtime eligibility for non-exempt maritime operations support staff at Oceanic Maritime Logistics. The chunk mentions that these employees receive 1.5x regular hourly wage for hours worked beyond 40 hours and that overtime requires pre-authorization by department manager at least 24 hours in advance.",
+      "citations": [
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+          "excerpt": "Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Health insurance copays",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain specific details about copays for healthcare services, including primary care consultation copayment of $25 and specialist consultation copayment of $40. These details directly support the topic of health insurance copays.",
+      "citations": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+          "excerpt": "Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Annual wellness stipends",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain direct, factual evidence covering the core scope of the topic. Specifically, the second evidence chunk explicitly states that 'Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment.' This directly supports the existence and amount of annual wellness stipends.",
+      "citations": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+          "excerpt": "Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "401(k) retirement matching",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunk explicitly states that the company matches 100% of employee retirement contributions up to 5% of gross base salary, which directly supports the topic of 401(k) retirement matching.",
+      "citations": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+          "excerpt": "Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Tuition assistance caps",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunk explicitly states the tuition reimbursement cap, which directly supports the topic of tuition assistance caps.",
+      "citations": [
+        {
+          "source": "benefits_and_wellness_policy.pdf",
+          "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+          "excerpt": "Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Remote work schedule rules",
+      "status": "partially_supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain information related to remote work, but they do not provide a comprehensive set of rules and regulations for remote work schedule. The chunks mention remote work eligibility, core hours, and home office technical allowance, but do not cover all aspects of remote work schedule rules such as work hours, core hours, and IT hardware provisions. The chunks also do not provide information about the resignation notice period, anti-harassment reporting, or overtime eligibility.",
+      "citations": [
+        {
+          "source": "workplace_conduct_and_travel_policy.pdf",
+          "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+          "excerpt": "Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire."
+        },
+        {
+          "source": "leave_and_attendance_policy.pdf",
+          "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+          "excerpt": "Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable."
+        }
+      ],
+      "knowledge_gaps": [
+        "Overtime eligibility and pre-authorization procedures for non-exempt maritime operations support staff.",
+        "Resignation notice period for standard staff and Department Directors.",
+        "Anti-harassment reporting procedures and formal workplace harassment grievances filing requirements."
+      ],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Domestic/international travel meal per diems",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks contain direct, factual evidence related to the topic of domestic and international travel meal per diems. Specifically, the first chunk provides details about the per diem rates for domestic and international travel, including the $75 per day flat per diem for approved domestic travel requiring overnight lodging.",
+      "citations": [
+        {
+          "source": "workplace_conduct_and_travel_policy.pdf",
+          "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+          "excerpt": "Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Hotel lodging expense ceilings",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunk contains specific information about hotel lodging expense limits, which directly addresses the topic of hotel lodging expense ceilings. The document specifies a maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities.",
+      "citations": [
+        {
+          "source": "workplace_conduct_and_travel_policy.pdf",
+          "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+          "excerpt": "Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Travel expense report submission windows",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided chunks contain a clear statement regarding the deadline for submitting travel expense reports. The relevant excerpt is from the 'workplace_conduct_and_travel_policy.pdf' document, specifically from page 2, column 0.",
+      "citations": [
+        {
+          "source": "workplace_conduct_and_travel_policy.pdf",
+          "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+          "excerpt": "Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Anti-harassment grievance filing procedures",
+      "status": "supported",
+      "supported_portion": "",
+      "reason": "The provided chunk contains a section about anti-harassment reporting, which is directly relevant to the topic of anti-harassment grievance filing procedures. The chunk specifies that formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+      "citations": [
+        {
+          "source": "workplace_conduct_and_travel_policy.pdf",
+          "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+          "excerpt": "Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence."
+        }
+      ],
+      "knowledge_gaps": [],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Executive stock option vesting acceleration",
+      "status": "unsupported",
+      "supported_portion": "",
+      "reason": "The provided evidence chunks do not contain any information related to executive stock option vesting acceleration. The chunks focus on retirement plans and wellness programs, which are unrelated to stock option vesting acceleration.",
+      "citations": [],
+      "knowledge_gaps": [
+        "Executive stock option vesting acceleration is not mentioned or discussed in the provided evidence chunks."
+      ],
+      "evidence_validated": true
+    },
+    {
+      "topic": "Offshore relocation tax equalization allowances",
+      "status": "unsupported",
+      "supported_portion": "",
+      "reason": "No matching document evidence found in corpus for this topic.",
+      "citations": [],
+      "knowledge_gaps": [
+        "Corpus lacks any documentation regarding 'Offshore relocation tax equalization allowances'."
+      ],
+      "evidence_validated": true
+    }
+  ],
+  "knowledge_gaps": [
+    "Overtime eligibility and pre-authorization procedures for non-exempt maritime operations support staff.",
+    "Resignation notice period for standard staff and Department Directors.",
+    "Anti-harassment reporting procedures and formal workplace harassment grievances filing requirements.",
+    "Executive stock option vesting acceleration is not mentioned or discussed in the provided evidence chunks.",
+    "Corpus lacks any documentation regarding 'Offshore relocation tax equalization allowances'."
+  ]
+}

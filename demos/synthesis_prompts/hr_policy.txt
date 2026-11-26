@@ -1,0 +1,14 @@
+PROMPT FOR SYNTHESIZING HR POLICY DEMONSTRATION DATASET
+
+Domain: Maritime Logistics Corporation Human Resources Policies.
+Requirements:
+1. Create three cohesive PDF policy documents:
+   - leave_and_attendance_policy.pdf
+   - benefits_and_wellness_policy.pdf
+   - workplace_conduct_and_travel_policy.pdf
+2. Ensure consistent terminology, realistic maritime enterprise policies, and distinct numbers/dates.
+3. Cross-document relationships:
+   - Remote work core hours align with standard core operating hours (10:00-15:00).
+   - Sick leave doctor certificate requirement aligns with medical copayment benefits ($25 copay).
+   - Expense report submission for travel aligns with employee attendance tracking.
+4. Include deliberate knowledge gap: Executive stock option vesting acceleration and offshore relocation tax allowances.

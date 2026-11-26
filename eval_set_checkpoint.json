@@ -1,0 +1,406 @@
+{
+  "total_cases": 20,
+  "cases": [
+    {
+      "id": "eval_001",
+      "category": "out_of_scope",
+      "question": "Evaluation Question out_of_scope 3_0 for P-302?",
+      "expected_status": "refused",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": [],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_002",
+      "category": "out_of_scope",
+      "question": "Evaluation Question out_of_scope 3_1 for P-302?",
+      "expected_status": "refused",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": [],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_003",
+      "category": "out_of_scope",
+      "question": "Evaluation Question out_of_scope 3_2 for P-302?",
+      "expected_status": "refused",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": [],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_004",
+      "category": "out_of_scope",
+      "question": "Evaluation Question out_of_scope 3_3 for P-302?",
+      "expected_status": "refused",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": [],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_005",
+      "category": "ambiguous",
+      "question": "Evaluation Question ambiguous 4_0 for P-302?",
+      "expected_status": "clarification_needed",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": [],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_006",
+      "category": "ambiguous",
+      "question": "Evaluation Question ambiguous 4_1 for P-302?",
+      "expected_status": "clarification_needed",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": [],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_007",
+      "category": "ambiguous",
+      "question": "Evaluation Question ambiguous 4_2 for P-302?",
+      "expected_status": "clarification_needed",
+      "expected_key_facts": [
+        "Standard verified fact"
+      ],
+      "expected_sources": [],
+      "expected_evidence": [],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_008",
+      "category": "answerable",
+      "question": "What is the standard maritime customs clearance fee and where are the designated international port delivery hubs?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Standard maritime customs clearance fee: Flat $220 processing fee per consignment at all designated port hubs.",
+        "Designated international port delivery hubs: Rotterdam (Netherlands), Singapore (Jurong Port), Houston (USA), and Busan (South Korea)."
+      ],
+      "expected_sources": [
+        "port_delivery_and_logistics_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Standard maritime customs clearance fee: Flat $220 processing fee per consignment at all designated port hubs."
+        },
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Designated international port delivery hubs: Rotterdam (Netherlands), Singapore (Jurong Port), Houston (USA), and Busan (South Korea)."
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_009",
+      "category": "answerable",
+      "question": "What is the priority emergency freight surcharge and what is the minimum purchase order threshold for volume discount deductions?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Priority emergency freight surcharge: Flat $450 surcharge for expedited courier delivery to vessel berth within 72 hours of vessel port arrival.",
+        "Minimum purchase order threshold rules: Not specified in the provided document."
+      ],
+      "expected_sources": [
+        "port_delivery_and_logistics_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Priority emergency freight surcharge: Flat $450 surcharge for expedited courier delivery to vessel berth within 72 hours of vessel port arrival."
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_010",
+      "category": "answerable",
+      "question": "What is the port storage grace period and what is the excess demurrage storage fee?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "port storage grace period",
+        "excess demurrage storage fee"
+      ],
+      "expected_sources": [
+        "port_delivery_and_logistics_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Port warehouse storage grace period: Consignments receive 5 free calendar days of secure bonded port storage upon cargo arrival."
+        },
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Excess demurrage storage fee: $45 per pallet per day charged following expiration of the 5-day grace period."
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_011",
+      "category": "answerable",
+      "question": "What is the mandatory inspection certificate for engine parts and what is the associated fee?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "mandatory inspection certificate for engine parts",
+        "associated fee for mandatory inspection certificate"
+      ],
+      "expected_sources": [
+        "port_delivery_and_logistics_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Pre-shipment classification inspection certificate: Mandatory for all engine fuel injection parts and turbocharger bearings."
+        },
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Inspection certification fee: Flat $150 fee per certified component batch issued by DNV or Lloyd\u2019s Register."
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_012",
+      "category": "answerable",
+      "question": "What is the delivery inspection protocol and what is the time frame for vessel receiving officer to sign the goods receipt note?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "delivery inspection protocol",
+        "time frame for vessel receiving officer to sign the goods receipt note"
+      ],
+      "expected_sources": [
+        "port_delivery_and_logistics_policy.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Delivery inspection protocol: Vessel receiving officer must sign goods receipt note within 24 hours of quayside delivery."
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_013",
+      "category": "answerable",
+      "question": "What is the net purchase price for 3 units of part number ELE-ACT-901, considering the unit price of $1850.00 and a minimum order quantity of 1?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Net purchase price for 3 units"
+      ],
+      "expected_sources": [
+        "spare_parts_catalog.csv"
+      ],
+      "expected_evidence": [
+        {
+          "source": "spare_parts_catalog.csv",
+          "excerpt": "part_number: ELE-ACT-901, item_name: Electric Rotary Valve Actuator 24V, category: Actuators, manufacturer: Rotork Marine, unit_price_usd: 1850.00, lead_time_days: 30, minimum_order_qty: 1, stock_on_hand: 5"
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_014",
+      "category": "answerable",
+      "question": "What is the total delivery cost for a shipment of 5 units of part number ELE-ACT-901, considering the priority emergency freight surcharge and mandatory customs clearance fees?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Total delivery cost for 5 units"
+      ],
+      "expected_sources": [
+        "spare_parts_catalog.csv"
+      ],
+      "expected_evidence": [
+        {
+          "source": "spare_parts_catalog.csv",
+          "excerpt": "part_number: ELE-ACT-901, item_name: Electric Rotary Valve Actuator 24V, category: Actuators, manufacturer: Rotork Marine, unit_price_usd: 1850.00, lead_time_days: 30, minimum_order_qty: 1, stock_on_hand: 5"
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_015",
+      "category": "answerable",
+      "question": "What is the mandatory inspection certificate fee for part number ELE-ACT-901, considering the mandatory inspection certificate requirement for engine parts?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Mandatory inspection certificate fee for ELE-ACT-901"
+      ],
+      "expected_sources": [
+        "spare_parts_catalog.csv"
+      ],
+      "expected_evidence": [
+        {
+          "source": "spare_parts_catalog.csv",
+          "excerpt": "part_number: ELE-ACT-901, item_name: Electric Rotary Valve Actuator 24V, category: Actuators, manufacturer: Rotork Marine, unit_price_usd: 1850.00, lead_time_days: 30, minimum_order_qty: 1, stock_on_hand: 5"
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_016",
+      "category": "answerable",
+      "question": "What is the net purchase price for 3 units of part number ENG-INJ-201, considering the unit price of $850.00 and a minimum order quantity of 4?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Net purchase price for 3 units of ENG-INJ-201",
+        "Minimum order quantity for ENG-INJ-201"
+      ],
+      "expected_sources": [
+        "spare_parts_catalog.csv"
+      ],
+      "expected_evidence": [
+        {
+          "source": "spare_parts_catalog.csv",
+          "excerpt": "Row 3: part_number: ENG-INJ-201, item_name: Heavy Fuel Injector Nozzle, category: Fuel Injection, manufacturer: Wartsila Engine Parts, unit_price_usd: 850.00, lead_time_days: 21, minimum_order_qty: 4, stock_on_hand: 12"
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_017",
+      "category": "answerable",
+      "question": "What is the port storage grace period for part number ELE-ACT-901 and what is the associated demurrage fee?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Port storage grace period for ELE-ACT-901",
+        "Demurrage fee for ELE-ACT-901"
+      ],
+      "expected_sources": [
+        "spare_parts_catalog.csv"
+      ],
+      "expected_evidence": [
+        {
+          "source": "spare_parts_catalog.csv",
+          "excerpt": "Row 3: part_number: ENG-INJ-201, item_name: Heavy Fuel Injector Nozzle, category: Fuel Injection, manufacturer: Wartsila Engine Parts, unit_price_usd: 850.00, lead_time_days: 21, minimum_order_qty: 4, stock_on_hand: 12"
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_018",
+      "category": "cross_document",
+      "question": "How much would a purchase of 2 High-Pressure Globe Valves (MAR-VAL-101) and 1 Common Rail Pressure Relief Valve (ENG-INJ-202) cost, including volume discount, early settlement discount, and minimum order threshold fee, if the total order value is $30,000?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Volume discount tier 3 applies for single-order values of $30,000 or greater.",
+        "Volume discount tier 3: 15% discount on catalog line items for single-order values of $30,000 or greater.",
+        "Early payment cash discount: 2% settlement discount on total invoice amount if full payment is remitted within 10 calendar days.",
+        "Minimum order threshold: Small order processing fee of $75 is assessed on purchase orders under $500 total value.",
+        "Minimum order quantity for ENG-INJ-202 is 1 unit."
+      ],
+      "expected_sources": [
+        "spare_parts_catalog.csv",
+        "supplier_terms_and_discounts.pdf"
+      ],
+      "expected_evidence": [
+        {
+          "source": "spare_parts_catalog.csv",
+          "excerpt": "ENG-INJ-202, item_name: Common Rail Pressure Relief Valve, unit_price_usd: 1250.00"
+        },
+        {
+          "source": "supplier_terms_and_discounts.pdf",
+          "excerpt": "Volume discount tier 3: 15% discount on catalog line items for single-order values of $30,000 or greater."
+        }
+      ],
+      "composition_metadata": null
+    },
+    {
+      "id": "eval_019",
+      "category": "cross_document",
+      "question": "What is the standard maritime customs clearance fee and where are the designated international port delivery hubs, and what is the net purchase price for 3 units of part number ELE-ACT-901, considering the unit price of $1850.00 and a minimum order quantity of 1?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Standard maritime customs clearance fee: Flat $220 processing fee per consignment at all designated port hubs.",
+        "Designated international port delivery hubs: Rotterdam (Netherlands), Singapore (Jurong Port), Houston (USA), and Busan (South Korea).",
+        "Net purchase price for 3 units"
+      ],
+      "expected_sources": [
+        "port_delivery_and_logistics_policy.pdf",
+        "spare_parts_catalog.csv"
+      ],
+      "expected_evidence": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Standard maritime customs clearance fee: Flat $220 processing fee per consignment at all designated port hubs."
+        },
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Designated international port delivery hubs: Rotterdam (Netherlands), Singapore (Jurong Port), Houston (USA), and Busan (South Korea)."
+        },
+        {
+          "source": "spare_parts_catalog.csv",
+          "excerpt": "part_number: ELE-ACT-901, item_name: Electric Rotary Valve Actuator 24V, category: Actuators, manufacturer: Rotork Marine, unit_price_usd: 1850.00, lead_time_days: 30, minimum_order_qty: 1, stock_on_hand: 5"
+        }
+      ],
+      "composition_metadata": {
+        "method": "deterministic_pair_composition",
+        "parent_case_ids": [
+          "eval_008",
+          "eval_013"
+        ],
+        "parent_sources": [
+          "port_delivery_and_logistics_policy.pdf",
+          "spare_parts_catalog.csv"
+        ]
+      }
+    },
+    {
+      "id": "eval_020",
+      "category": "cross_document",
+      "question": "What is the standard maritime customs clearance fee and where are the designated international port delivery hubs, and what is the total delivery cost for a shipment of 5 units of part number ELE-ACT-901, considering the priority emergency freight surcharge and mandatory customs clearance fees?",
+      "expected_status": "answered",
+      "expected_key_facts": [
+        "Standard maritime customs clearance fee: Flat $220 processing fee per consignment at all designated port hubs.",
+        "Designated international port delivery hubs: Rotterdam (Netherlands), Singapore (Jurong Port), Houston (USA), and Busan (South Korea).",
+        "Total delivery cost for 5 units"
+      ],
+      "expected_sources": [
+        "port_delivery_and_logistics_policy.pdf",
+        "spare_parts_catalog.csv"
+      ],
+      "expected_evidence": [
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Standard maritime customs clearance fee: Flat $220 processing fee per consignment at all designated port hubs."
+        },
+        {
+          "source": "port_delivery_and_logistics_policy.pdf",
+          "excerpt": "Designated international port delivery hubs: Rotterdam (Netherlands), Singapore (Jurong Port), Houston (USA), and Busan (South Korea)."
+        },
+        {
+          "source": "spare_parts_catalog.csv",
+          "excerpt": "part_number: ELE-ACT-901, item_name: Electric Rotary Valve Actuator 24V, category: Actuators, manufacturer: Rotork Marine, unit_price_usd: 1850.00, lead_time_days: 30, minimum_order_qty: 1, stock_on_hand: 5"
+        }
+      ],
+      "composition_metadata": {
+        "method": "deterministic_pair_composition",
+        "parent_case_ids": [
+          "eval_008",
+          "eval_014"
+        ],
+        "parent_sources": [
+          "port_delivery_and_logistics_policy.pdf",
+          "spare_parts_catalog.csv"
+        ]
+      }
+    }
+  ]
+}

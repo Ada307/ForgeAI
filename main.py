@@ -152,16 +152,34 @@ def run_factory(
         )
         final_definition = optimization_result.best_agent_definition
 
-        # Format detailed evaluation results
-        for j in optimization_result.best_scorecard.judgments:
-            eval_results.append(j.to_dict())
+        # Format detailed evaluation results preserving baseline and every iteration
+        eval_results_payload = {
+            "baseline": {
+                "scorecard": optimization_result.baseline_scorecard.to_dict(),
+                "judgments": [j.to_dict() for j in optimization_result.baseline_scorecard.judgments],
+            },
+            "iterations": [
+                {
+                    "iteration": log.iteration,
+                    "action_type": log.action_type,
+                    "change_summary": log.change_summary,
+                    "scorecard": log.scorecard.to_dict(),
+                    "judgments": [j.to_dict() for j in log.scorecard.judgments],
+                }
+                for log in optimization_result.history
+            ],
+            "best": {
+                "scorecard": optimization_result.best_scorecard.to_dict(),
+                "judgments": [j.to_dict() for j in optimization_result.best_scorecard.judgments],
+            },
+        }
 
         # Immediately save Stage 6 artifacts
         save_stage_artifacts(
             output_dir,
             final_definition=final_definition,
             optimization_result=optimization_result,
-            evaluation_results=eval_results,
+            evaluation_results=eval_results_payload,
         )
         print(f"  -> Optimization complete. Best Pass Rate: {optimization_result.best_scorecard.pass_rate * 100:.1f}%.")
         print("  -> Saved 'iteration_logs.json', 'scorecards.json', and 'eval_results.json'.")

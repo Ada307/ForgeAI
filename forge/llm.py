@@ -29,7 +29,7 @@ class OllamaClient:
         model: str = "qwen2.5:3b",
         temperature: float = 0.1,
         num_ctx: int = 4096,
-        timeout: float = 60.0,
+        timeout: float = 300.0,
         max_tokens: Optional[int] = None,
     ) -> None:
         self.base_url = base_url.rstrip("/")

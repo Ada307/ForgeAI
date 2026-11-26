@@ -1,0 +1,66 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 7 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 7 0 R >> >> >>
+endobj
+5 0 obj
+<< /Length 839 >>
+stream
+BT
+/F1 11 Tf
+50 740 Td
+14 TL
+(Oceanic Fleet Technical Procurement - Commercial Terms and Pricing Framework) '
+(Document Ref: OML-PROC-POL-01 | Classification: Commercial In-Confidence) '
+(Section 1: Commercial Payment and Settlement Terms) '
+(Standard commercial payment terms: Net 30 calendar days from bill of lading date.) '
+(Early payment cash discount: 2% settlement discount on total invoice amount if full payment is remitted within 10 calendar days.) '
+(Minimum purchase order threshold: Small order processing fee of $75 is assessed on purchase orders under $500 total value.) '
+(Currency of settlement: All purchase orders and commercial invoices are denominated in United States Dollars \(USD\).) '
+(Restocking fee for returned items: 15% handling fee on approved returns of non-defective parts within 30 days of delivery.) '
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 837 >>
+stream
+BT
+/F1 11 Tf
+50 740 Td
+14 TL
+(Section 2: Volume Discount Schedules and Warranty Provisions) '
+(Volume discount tier 1: 5% discount on catalog line items for single-order values between $5,000 and $14,999.) '
+(Volume discount tier 2: 10% discount on catalog line items for single-order values between $15,000 and $29,999.) '
+(Volume discount tier 3: 15% discount on catalog line items for single-order values of $30,000 or greater.) '
+(Warranty for mechanical parts \(Valves, Pumps, Turbochargers, Seals\): 12 months from vessel installation or 4,000 operating hours, whichever occurs first.) '
+(Warranty for electronic components \(Instrumentation and Actuators\): 24 months full manufacturer warranty from delivery date.) '
+(Consumables warranty \(Filters and Gaskets\): 6 months storage shelf life warranty prior to installation.) '
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000373 00000 n 
+0000001263 00000 n 
+0000002151 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2221
+%%EOF

@@ -1,0 +1,14 @@
+PROMPT FOR SYNTHESIZING SHIP PROCUREMENT DEMONSTRATION DATASET
+
+Domain: Maritime Fleet Engineering Technical Procurement and Spare Parts.
+Requirements:
+1. Create one structured parts catalog CSV:
+   - spare_parts_catalog.csv (14 distinct marine parts across 8 categories with prices, lead times, MOQ, stock)
+2. Create two commercial policy PDFs:
+   - supplier_terms_and_discounts.pdf (volume discounts 5%/10%/15%, 2% early payment, warranties)
+   - port_delivery_and_logistics_policy.pdf (customs fee $220, emergency fee $450, demurrage $45/day, inspection $150)
+3. Cross-document relationships:
+   - Total cost computation: catalog unit price * quantity - volume discount tier + logistics surcharges.
+   - Lead time computation: catalog lead time days vs emergency 72-hour delivery rules.
+   - Warranty categorization: catalog component category determines 12-month vs 24-month warranty coverage.
+4. Include deliberate knowledge gap: Supplier insolvency insurance and sovereign debt default compensation.

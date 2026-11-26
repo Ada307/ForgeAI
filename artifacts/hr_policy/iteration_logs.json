@@ -1,0 +1,1818 @@
+[
+  {
+    "iteration": 1,
+    "action_type": "update_retrieval_config",
+    "change_summary": "Updated retrieval config: chunk_size=180, chunk_overlap=30, top_k=5, min_score=0.0",
+    "reason": "Adjusting the chunk_size to 180 and increasing top_k to 5 to potentially improve the retrieval of relevant chunks and citations.",
+    "addressed_case_ids": [
+      "eval_001",
+      "eval_002",
+      "eval_003",
+      "eval_004",
+      "eval_005",
+      "eval_006",
+      "eval_007",
+      "eval_012",
+      "eval_014",
+      "eval_015",
+      "eval_017",
+      "eval_018",
+      "eval_019",
+      "eval_020"
+    ],
+    "failure_categories": {
+      "prompt_defect": 7,
+      "hallucination": 3,
+      "retrieval_miss": 3,
+      "wrong_refusal": 1
+    },
+    "before_pass_rate": 0.3,
+    "after_pass_rate": 0.35,
+    "regressions": [],
+    "scorecard": {
+      "total_cases": 20,
+      "passed_cases": 7,
+      "failed_cases": 13,
+      "pass_rate": 0.35,
+      "category_scores": {
+        "out_of_scope": {
+          "total": 4,
+          "passed": 0,
+          "pass_rate": 0.0
+        },
+        "ambiguous": {
+          "total": 3,
+          "passed": 0,
+          "pass_rate": 0.0
+        },
+        "answerable": {
+          "total": 10,
+          "passed": 7,
+          "pass_rate": 0.7
+        },
+        "cross_document": {
+          "total": 3,
+          "passed": 0,
+          "pass_rate": 0.0
+        }
+      },
+      "failed_case_ids": [
+        "eval_001",
+        "eval_002",
+        "eval_003",
+        "eval_004",
+        "eval_005",
+        "eval_006",
+        "eval_007",
+        "eval_012",
+        "eval_015",
+        "eval_017",
+        "eval_018",
+        "eval_019",
+        "eval_020"
+      ],
+      "judgments": [
+        {
+          "case_id": "eval_001",
+          "category": "out_of_scope",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": true,
+          "reason": "The candidate response correctly identifies the query as out of scope and lacks factual evidence, but the expected status is 'refused' which is not matched. The response does not provide the required grounding score as the evidence does not support the claims made.",
+          "evidence_used": [
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.15624645691542713
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.11223646235904808
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08334470945941112
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07464273433097578
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.06618337749200874
+            }
+          ]
+        },
+        {
+          "case_id": "eval_002",
+          "category": "out_of_scope",
+          "passed": false,
+          "status_match": false,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": false,
+          "reason": "Status mismatch: expected 'refused', got 'clarification_needed'.",
+          "evidence_used": [
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.15624645691542713
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.11223646235904808
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08334470945941112
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07464273433097578
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.06618337749200874
+            }
+          ]
+        },
+        {
+          "case_id": "eval_003",
+          "category": "out_of_scope",
+          "passed": false,
+          "status_match": false,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": false,
+          "reason": "Status mismatch: expected 'refused', got 'clarification_needed'.",
+          "evidence_used": [
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.15624645691542713
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.11223646235904808
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08334470945941112
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07464273433097578
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.06618337749200874
+            }
+          ]
+        },
+        {
+          "case_id": "eval_004",
+          "category": "out_of_scope",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": true,
+          "reason": "The candidate response correctly identifies the ambiguity and lack of specificity in the user query, refusing to provide a factual answer. However, the refusal is not in line with the expected status 'refused' as the response does not properly identify missing details and request clarification. The response should have scored grounding_score as 0.0 since it contains unsupported claims.",
+          "evidence_used": [
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.15624645691542713
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.11223646235904808
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08334470945941112
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07464273433097578
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.06618337749200874
+            }
+          ]
+        },
+        {
+          "case_id": "eval_005",
+          "category": "ambiguous",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": true,
+          "reason": "The candidate response correctly identifies that the query lacks sufficient context and requests clarification, matching the expected status 'clarification_needed'. However, the scoring guidelines require a factual_score and grounding_score to be 1.0 for a passed verdict, which is not possible given the current context. The response should be scored based on the refusal / clarification cases, but the provided scoring guidelines do not allow for such a score. Therefore, the response is scored as not passed.",
+          "evidence_used": [
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.15624645691542713
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.11223646235904808
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08334470945941112
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07464273433097578
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.06618337749200874
+            }
+          ]
+        },
+        {
+          "case_id": "eval_006",
+          "category": "ambiguous",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": true,
+          "reason": "The candidate response correctly identifies the need for clarification, but does not provide any factual information or grounding from the evidence. The expected status is 'clarification_needed', so the candidate's response is technically correct in this regard, but it does not meet the requirement of providing factual support or grounding from the evidence.",
+          "evidence_used": [
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.15624645691542713
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.11223646235904808
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08334470945941112
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07464273433097578
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.06618337749200874
+            }
+          ]
+        },
+        {
+          "case_id": "eval_007",
+          "category": "ambiguous",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": true,
+          "reason": "The candidate response correctly identifies that the query is ambiguous and requires clarification, matching the expected 'clarification_needed' status. However, the expected facts and grounding support are not provided, as the response does not contain factual claims or evidence. The response should have a grounding_score of 0.0 and a factual_score of 0.0.",
+          "evidence_used": [
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.15624645691542713
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.11223646235904808
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08334470945941112
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07464273433097578
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.06618337749200874
+            }
+          ]
+        },
+        {
+          "case_id": "eval_008",
+          "category": "answerable",
+          "passed": true,
+          "status_match": true,
+          "grounding_score": 1.0,
+          "factual_score": 1.0,
+          "citation_valid": true,
+          "reason": "The candidate provided the correct maximum annual dental coverage amount and grounded their answer with evidence from the provided documents, meeting the required factual correctness and grounding support criteria.",
+          "evidence_used": [
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.3322897848351516
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.13612417925707568
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.09329112771601474
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07528895870296479
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.048038603659245095
+            }
+          ]
+        },
+        {
+          "case_id": "eval_009",
+          "category": "answerable",
+          "passed": true,
+          "status_match": true,
+          "grounding_score": 1.0,
+          "factual_score": 1.0,
+          "citation_valid": true,
+          "reason": "The candidate provided the correct copayment for a specialist consultation in the Oceanic Maritime Comprehensive Health Plan, and this information is directly supported by the provided evidence. The candidate did not hallucinate, contradict facts, or answer when refusal was required.",
+          "evidence_used": [
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.3359836262155992
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.09802206715830059
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08852801890764772
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.0824866008497068
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.037982642369350755
+            }
+          ]
+        },
+        {
+          "case_id": "eval_010",
+          "category": "answerable",
+          "passed": true,
+          "status_match": true,
+          "grounding_score": 1.0,
+          "factual_score": 1.0,
+          "citation_valid": true,
+          "reason": "The candidate provided the correct maximum annual benefit for prescription eyewear or contact lenses under the Oceanic Maritime Comprehensive Health Plan, which is $300. The answer is directly supported by the evidence provided in the 'benefits_and_wellness_policy.pdf' document, which states the Optical allowance is $300 annual benefit for prescription eyewear or contact lenses. The candidate's answer is factual and grounded in the provided evidence.",
+          "evidence_used": [
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.32262376082990346
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.13315989355718957
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.11090477390759475
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.05236813408544801
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.03540398586199085
+            }
+          ]
+        },
+        {
+          "case_id": "eval_011",
+          "category": "answerable",
+          "passed": true,
+          "status_match": true,
+          "grounding_score": 1.0,
+          "factual_score": 1.0,
+          "citation_valid": true,
+          "reason": "The candidate provided the correct maximum annual benefit of $600 for gym memberships or ergonomic home equipment under the annual wellness stipend, which is directly supported by the retrieved document evidence. The answer is factual and grounded in the provided information.",
+          "evidence_used": [
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.26471128858664283
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.16884846311599588
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.1580539214191025
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.02790284837342813
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.027235127859508924
+            }
+          ]
+        },
+        {
+          "case_id": "eval_012",
+          "category": "answerable",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": false,
+          "reason": "Execution errors occurred during generation: Fabricated or invalid citation rejected: source='benefits_and_wellness_policy.pdf', chunk_id='benefits_and_wellness_policy.pdf:p1:c0', excerpt='Tuition reimbursement cap: Up to $3,500 ...'; All proposed citations failed verification against actual chunks.",
+          "evidence_used": [
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.276400215620771
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.121638297544338
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.09880672690398724
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.027058522071335713
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.023533739854774947
+            }
+          ]
+        },
+        {
+          "case_id": "eval_013",
+          "category": "answerable",
+          "passed": true,
+          "status_match": true,
+          "grounding_score": 1.0,
+          "factual_score": 1.0,
+          "citation_valid": true,
+          "reason": "The candidate provided the correct number of working days of paid annual leave per calendar year for full-time employees, which is directly supported by the evidence. No contradictions or hallucinations were found.",
+          "evidence_used": [
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.45707486225658056
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.12626415448598818
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.1105341597546598
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.06612888791996681
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.05509239297143634
+            }
+          ]
+        },
+        {
+          "case_id": "eval_014",
+          "category": "answerable",
+          "passed": true,
+          "status_match": true,
+          "grounding_score": 1.0,
+          "factual_score": 1.0,
+          "citation_valid": true,
+          "reason": "The candidate provided the correct number of paid sick days per calendar year (10) and this information is directly supported by the leave and attendance policy document. No fabricated or unsupported claims were made, and all expected facts are present and accurate.",
+          "evidence_used": [
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.44388677070256344
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.15616076026007836
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.1054024128612741
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.08323933171508859
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.051478942835087596
+            }
+          ]
+        },
+        {
+          "case_id": "eval_015",
+          "category": "answerable",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": false,
+          "reason": "Execution errors occurred during generation: Fabricated or invalid citation rejected: source='leave_and_attendance_policy.pdf', chunk_id='leave_and_attendance_policy.pdf:p1:c0', excerpt='Bereavement leave: 5 consecutive paid wo...'; All proposed citations failed verification against actual chunks.",
+          "evidence_used": [
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.40562050272787936
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.11408793671838129
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.07143911717258694
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.043149132562919
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.030621392619771946
+            }
+          ]
+        },
+        {
+          "case_id": "eval_016",
+          "category": "answerable",
+          "passed": true,
+          "status_match": true,
+          "grounding_score": 1.0,
+          "factual_score": 1.0,
+          "citation_valid": true,
+          "reason": "The candidate provided the exact number of weeks of fully paid parental leave as expected, and the evidence supports this information. The evidence from the leave and attendance policy document confirms the 16 weeks of fully paid primary caregiver leave and 6 weeks of fully paid secondary caregiver leave.",
+          "evidence_used": [
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.4977532362352475
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.0754862047034411
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.06182869406194664
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.04498039286506626
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.04485450447172708
+            }
+          ]
+        },
+        {
+          "case_id": "eval_017",
+          "category": "answerable",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.5,
+          "factual_score": 0.5,
+          "citation_valid": true,
+          "reason": "The candidate provided the correct maximum annual wellness stipend amount ($600 per calendar year) but did not mention that this amount is not specified in the provided document, which contradicts the expected facts. The grounding score is also 0.5 as the answer contains a factual claim that is supported by the evidence but also contradicts the expected facts.",
+          "evidence_used": [
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.2868617198130344
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.12553313921946138
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.1248159869573998
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p2:c0",
+              "text": "Section 2: Corporate Travel and Expense Reimbursements Domestic travel meal per diem: $75 per day flat per diem for approved domestic travel requiring overnight lodging. International maritime travel meal per diem: $110 per day flat per diem for international port assignments. Hotel lodging expense limit: Maximum $200 per night for standard tier cities and $280 per night for designated coastal port cities. Personal vehicle mileage allowance: $0.67 per mile for pre-authorized business travel. Travel expense reporting deadline: Complete expense reports and itemized receipts must be submitted within 14 calendar days of travel. Emergency travel evacuation coverage: Company provides up to $100,000 emergency medical evacuation coverage during international business travel.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p2"
+              },
+              "score": 0.03399569270690961
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.033182169259356714
+            }
+          ]
+        },
+        {
+          "case_id": "eval_018",
+          "category": "cross_document",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.0,
+          "factual_score": 0.0,
+          "citation_valid": false,
+          "reason": "Execution errors occurred during generation: Fabricated or invalid citation rejected: source='benefits_and_wellness_policy.pdf', chunk_id='benefits_and_wellness_policy.pdf:p1:c0', excerpt='Annual wellness stipend: $600 per calend...'; All proposed citations failed verification against actual chunks.",
+          "evidence_used": [
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.19443474327840324
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.1742764031639798
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.17051112667246313
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.1559356070675442
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.10725188473910158
+            }
+          ]
+        },
+        {
+          "case_id": "eval_019",
+          "category": "cross_document",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.5,
+          "factual_score": 0.5,
+          "citation_valid": false,
+          "reason": "Cross-document case requires citations from at least 2 distinct files, got 1: ['leave_and_attendance_policy.pdf']",
+          "evidence_used": [
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.41863172655659675
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.19516632854268684
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.18883469906060393
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.10345470876047881
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.0787391709019373
+            }
+          ]
+        },
+        {
+          "case_id": "eval_020",
+          "category": "cross_document",
+          "passed": false,
+          "status_match": true,
+          "grounding_score": 0.5,
+          "factual_score": 0.5,
+          "citation_valid": false,
+          "reason": "Cross-document case requires citations from at least 2 distinct files, got 1: ['benefits_and_wellness_policy.pdf']",
+          "evidence_used": [
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Benefits and Wellness Guide Document Ref: OML-HR-POL-02 | Classification: Internal Section 1: Healthcare and Insurance Coverage Healthcare coverage provider: Oceanic Maritime Comprehensive Health Plan. Employer contribution: Company pays 85% of monthly healthcare premium for employees and 65% for enrolled dependents. Primary care consultation copayment: $25 flat copay per in-network visit. Specialist consultation copayment: $40 flat copay per in-network specialist visit. Dental coverage maximum: Comprehensive dental allowance provides up to $1,200 annual maximum coverage per member. Optical allowance: $300 annual benefit for prescription eyewear or contact lenses. Group term life insurance: Employer provides basic life insurance equal to 2x basic annual earnings up to a $500,000 maximum.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p1"
+              },
+              "score": 0.2740904441367446
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Employee Policy Manual Document Ref: OML-HR-POL-01 | Classification: Internal Section 1: Working Hours and Attendance Guidelines Standard working hours for full-time shore staff are 40 hours per week. Work schedule is Monday to Friday, 09:00 to 17:30 with a 30-minute unpaid lunch break. Core operating hours are 10:00 to 15:00 local time, during which all staff must be reachable. Overtime eligibility: Non-exempt maritime operations support staff receive 1.5x regular hourly wage for hours worked beyond 40 hours. Overtime requires pre-authorization by department manager at least 24 hours in advance. Absence notification requirement: Employees must inform their line manager at least 60 minutes before scheduled start time.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p1"
+              },
+              "score": 0.19871693889206268
+            },
+            {
+              "chunk_id": "leave_and_attendance_policy.pdf:p2:c0",
+              "text": "Section 2: Paid Leave Entitlements and Accrual Annual leave entitlement: Full-time employees accrue 22 working days of paid annual leave per calendar year. Annual leave accrues monthly at the rate of 1.83 working days per completed month of active service. Maximum annual leave rollover: Up to 5 unused annual leave days may be carried forward into the subsequent calendar year. Carried-forward annual leave must be utilized before March 31 of the new calendar year or it is forfeited. Sick leave quota: Employees receive 10 paid sick days per calendar year credited on January 1. Medical certification rule: A registered physician medical certificate is mandatory for consecutive sick leave absences exceeding 3 days. Bereavement leave: 5 consecutive paid working days for immediate family members and 3 paid days for extended family. Parental leave: 16 weeks fully paid primary caregiver leave, and 6 weeks fully paid secondary caregiver leave after 12 months service.",
+              "metadata": {
+                "source": "leave_and_attendance_policy.pdf",
+                "file_type": "pdf",
+                "filename": "leave_and_attendance_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "leave_and_attendance_policy.pdf:p2"
+              },
+              "score": 0.13454434846152283
+            },
+            {
+              "chunk_id": "workplace_conduct_and_travel_policy.pdf:p1:c0",
+              "text": "Oceanic Maritime Logistics - Conduct, Remote Work, and Travel Regulations Document Ref: OML-HR-POL-03 | Classification: Internal Section 1: Remote Work Policy Remote work eligibility: Eligible full-time office staff may work remotely up to 2 days per week (Tuesdays and Thursdays). Remote work core hours: Remote personnel must remain online and available during core hours of 10:00 to 15:00 local time. Home office technical allowance: One-time IT hardware provision of $400 for dual monitor or dock setup upon hire. Resignation notice period: Standard staff must provide 30 calendar days written notice; Department Directors must provide 60 calendar days. Anti-harassment reporting: Formal workplace harassment grievances must be filed with HR in writing within 45 days of occurrence.",
+              "metadata": {
+                "source": "workplace_conduct_and_travel_policy.pdf",
+                "file_type": "pdf",
+                "filename": "workplace_conduct_and_travel_policy.pdf",
+                "page": 1,
+                "page_number": 1,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "workplace_conduct_and_travel_policy.pdf:p1"
+              },
+              "score": 0.10886877857259876
+            },
+            {
+              "chunk_id": "benefits_and_wellness_policy.pdf:p2:c0",
+              "text": "Section 2: Wellness, Education, and Retirement Programs Annual wellness stipend: $600 per calendar year reimbursed for gym memberships, fitness trackers, or ergonomic home equipment. Mental health support: 8 free confidential counseling sessions per calendar year through the Employee Assistance Program (EAP). Retirement 401(k) plan: Company matches 100% of employee retirement contributions up to 5% of gross base salary. Retirement vesting: Employer matching contributions vest immediately at 100% upon payroll deposit. Tuition reimbursement cap: Up to $3,500 per calendar year for approved job-related accredited coursework. Tuition grade requirement: Reimbursement requires successful course completion with Grade B (3.0 GPA) or equivalent.",
+              "metadata": {
+                "source": "benefits_and_wellness_policy.pdf",
+                "file_type": "pdf",
+                "filename": "benefits_and_wellness_policy.pdf",
+                "page": 2,
+                "page_number": 2,
+                "total_pages": 2,
+                "chunk_index": 0,
+                "doc_id": "benefits_and_wellness_policy.pdf:p2"
+              },
+              "score": 0.08947457554874963
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
