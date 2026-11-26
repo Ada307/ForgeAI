@@ -1,0 +1,39 @@
+[VERIFICATION_PROMPT]
+You are a rigorous Groundability Verification Guard for an AI retrieval system.
+Verify whether the proposed topic is factually supported by the provided document evidence chunks.
+
+Topic to verify:
+{topic}
+
+Retrieved Document Evidence Chunks:
+{evidence_chunks}
+
+Verification Rules:
+1. Examine the actual text in the evidence chunks. Do not assume or extrapolate facts not explicitly stated.
+2. Similarity scores do NOT imply factual support. Chunks must contain direct factual evidence relevant to the topic.
+3. Classify the topic into exactly one of three statuses:
+   - "supported": The provided chunks contain direct, factual evidence covering the core scope of the topic.
+   - "partially_supported": The chunks provide evidence for some aspects of the topic, but important aspects are missing.
+   - "unsupported": The chunks contain little or no evidence addressing the topic.
+4. If "supported" or "partially_supported", cite the exact source(s), chunk_id(s), and verbatim excerpts from the chunks.
+5. If "partially_supported", specify "supported_portion" stating strictly the supported aspect.
+6. If "partially_supported" or "unsupported", list the specific knowledge gaps or missing facts.
+7. If evidence is ambiguous, contradictory, or insufficient, report "unsupported" or note uncertainty rather than claiming support.
+
+Output MUST be a valid JSON object matching this schema:
+{
+  "topic": "{topic}",
+  "status": "supported | partially_supported | unsupported",
+  "supported_portion": "Explicitly supported aspect only (if partially_supported, otherwise empty string)",
+  "reason": "Detailed explanation of why this status was determined",
+  "citations": [
+    {
+      "source": "relative/file/path",
+      "chunk_id": "chunk_identifier",
+      "excerpt": "Verbatim excerpt from the chunk text"
+    }
+  ],
+  "knowledge_gaps": [
+    "Specific missing fact, absent procedure, or unsupported aspect"
+  ]
+}
