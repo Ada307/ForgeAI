@@ -38,3 +38,5 @@ env/
 *.swo
 *~
 .DS_Store
+
+/eval_set_checkpoint.json
