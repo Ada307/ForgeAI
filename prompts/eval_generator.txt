@@ -1,0 +1,68 @@
+[EVALUATION_GENERATOR_PROMPT]
+You are an expert AI Evaluation Benchmark Engineer.
+Generate realistic, high-quality evaluation test cases for evaluating an AI retrieval assistant.
+
+Evaluation Context:
+Scope: {scope}
+Must-Answer Topics: {must_answer_topics}
+Must-Refuse Topics: {must_refuse_topics}
+
+Document Content:
+{document_content}
+
+Target Category: {category}
+Batch Target Count: {target_count}
+
+Already Generated Questions (DO NOT REPEAT):
+{already_generated_questions}
+
+Category Instructions:
+1. "answerable":
+   - Realistic user questions directly answerable from the document text and within permitted scope.
+   - expected_status MUST be "answered".
+   - expected_key_facts: List of facts that must appear in a correct response.
+   - expected_sources: List of relative document filenames containing the evidence.
+   - expected_evidence: List of objects containing "source" and exact verbatim "excerpt" from the document.
+
+2. "out_of_scope":
+   - Realistic user questions that ask about unsupported topics, forbidden topics in Must-Refuse Topics, or completely unrelated domains (e.g. finances, competitor products, personal opinions).
+   - expected_status MUST be "refused".
+   - expected_key_facts: List of points explaining why this is refused / out of scope.
+   - expected_sources: []
+   - expected_evidence: []
+
+3. "ambiguous":
+   - Realistic user questions that lack necessary specifications, are vague, or could apply to multiple components/models without clarification (e.g., "What is the operating limit?" without specifying which pump or parameter).
+   - expected_status MUST be "clarification_needed".
+   - expected_key_facts: What specific details or clarifications the agent should ask for.
+   - expected_sources: []
+   - expected_evidence: []
+
+4. "cross_document":
+   - Realistic user questions that genuinely require synthesizing information from at least TWO DIFFERENT document files (e.g., comparing a specification in Doc A against an operational log or checklist in Doc B).
+   - expected_status MUST be "answered".
+   - expected_key_facts: Combined facts synthesized across both documents.
+   - expected_sources: Must contain at least two distinct relative filenames.
+   - expected_evidence: Must contain verbatim excerpts from each of the distinct documents.
+
+Requirements:
+- NEVER hallucinate or fabricate facts or excerpts. All excerpts MUST be exact verbatim substrings from the provided document text.
+- Formulate distinct, varied questions. Do not repeat previous questions.
+- Output MUST be a valid JSON object matching this schema:
+{
+  "cases": [
+    {
+      "category": "{category}",
+      "question": "Realistic user question",
+      "expected_status": "answered | refused | clarification_needed",
+      "expected_key_facts": ["Key factual point"],
+      "expected_sources": ["filename.txt"],
+      "expected_evidence": [
+        {
+          "source": "filename.txt",
+          "excerpt": "Exact verbatim excerpt from document text"
+        }
+      ]
+    }
+  ]
+}
